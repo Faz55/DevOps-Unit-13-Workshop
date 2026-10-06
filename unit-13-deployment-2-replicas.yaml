@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: unit-13-deployment
+spec:
+  selector:
+    matchLabels:
+      app: unit-13-pod
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: unit-13-pod
+    spec:
+      containers:
+        - name: container-name
+          image: nginx
+          ports:
+            - containerPort: 80
