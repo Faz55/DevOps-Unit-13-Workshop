@@ -1,0 +1,13 @@
+# service.yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: unit-13-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: unit-13-pod
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
