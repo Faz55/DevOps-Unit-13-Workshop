@@ -1,3 +1,4 @@
+# unit-13-deployment-3-replicas.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -6,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: unit-13-pod
-  replicas: 2
+  replicas: 3
   template:
     metadata:
       labels:
